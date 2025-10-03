@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-group textarea {
+            resize: none;
+            height: 80px;
+        }
+        .form-group button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="/submit_registration" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">Years of Experience</label>
+                <select id="experience" name="experience" required>
+                    <option value="">Select your experience</option>
+                    <option value="0-1">0-1 years</option>
+                    <option value="2-3">2-3 years</option>
+                    <option value="4-5">4-5 years</option>
+                    <option value="6+">6+ years</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="qualification">Qualifications</label>
+                <select id="qualification" name="qualification" required>
+                    <option value="">Select your qualification</option>
+                    <option value="highschool">High School</option>
+                    <option value="bachelors">Bachelor's Degree</option>
+                    <option value="masters">Master's Degree</option>
+                    <option value="phd">Ph.D.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interest">Describe Your Interests</label>
+                <textarea id="interest" name="interest" placeholder="Share your interests here..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="role">Describe Your Role</label>
+                <textarea id="role" name="role" placeholder="Describe the role you are seeking..." required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="/static/css/style.css">  <!-- Link to your CSS -->
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4">Registered Users</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Experience</th>
+                    <th>Qualification</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Interest</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user[1] }}</td>  <!-- Full Name -->
+                    <td>{{ user[2] }}</td>  <!-- Email -->
+                    <td>{{ user[3] }}</td>  <!-- Experience -->
+                    <td>{{ user[4] }}</td>  <!-- Qualification -->
+                    <td>{{ user[5] }}</td>  <!-- Phone -->
+                    <td>{{ user[6] }}</td>  <!-- Role -->
+                    <td>{{ user[7] }}</td>  <!-- Interest -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
